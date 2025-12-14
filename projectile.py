@@ -11,14 +11,11 @@ t=np.linspace(0,time_flight,500)
 
 print(time_flight)
 
-y=[]
-x=[]
 
-for i in t:
-    y_t= (i*usr_velocity*math.sin((usr_angle*math.pi)/180))-(0.5*9.80*(i**2))
-    x_t= i*usr_velocity*math.cos((usr_angle*math.pi)/180)
-    x.append(x_t)
-    y.append(y_t)
+
+y= (t*usr_velocity*math.sin((usr_angle*math.pi)/180))-(0.5*9.80*(t**2))
+x= t*usr_velocity*math.cos((usr_angle*math.pi)/180)
+   
 
 
 usr_t=float(input("Enter time:"))
